@@ -56,17 +56,16 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyDown(RIGHT)){
-		fairy.x =fairy.x+3;
 
+	if(keyCode === RIGHT_ARROW){
+           fairy.x = fairy.x + 20;
 	}
-	if (keyDown(LEFT)){
-		fairy.x = fairy.x-3;
-		
+	
+        if(keyCode === LEFT_ARROW){
+           fairy.x = fairy.x - 20;
 	}
 
-if (keyDown(DOWN)){
-		Matter.Body.setStatic(starBody,false);
-		
+	if (keyCode === DOWN_ARROW) {
+		Matter.Body.setStatic(starBody,false); 
 	}
 }
